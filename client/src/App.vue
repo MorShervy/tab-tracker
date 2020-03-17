@@ -1,23 +1,39 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <page-header />
     <router-view/>
   </div>
 </template>
 
 <script>
+import PageHeader from './components/Header'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    PageHeader
+  }
 }
 </script>
 
 <style>
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;;
+    font-size: 1rem;
+    min-height: 100%;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+}
+.danger-red {
+  color: red;
 }
 </style>
